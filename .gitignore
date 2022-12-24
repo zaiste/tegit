@@ -61,3 +61,4 @@ node_modules/
 .vscode-test
 
 dist
+package

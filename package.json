@@ -12,7 +12,7 @@
     "dist"
   ],
   "scripts": {
-    "prepublishOnly": "rm -rf ./package && pnpm build && clean-publish --fields dependencies",
+    "prepublishOnly": "rm -rf ./package && pnpm build && clean-publish",
     "start": "node -r tsm src/index.ts",
     "build": "tsup && esbuild src/cli.ts --bundle --minify --outfile=dist/cli.js --platform=node --format=esm --target=node16 --banner:js=\"import { createRequire } from 'module';const require = createRequire(import.meta.url);import { dirname } from 'path'; import { fileURLToPath } from 'url'; const __dirname = dirname(fileURLToPath(import.meta.url));\" --out-extension:.js=.js"
   },
